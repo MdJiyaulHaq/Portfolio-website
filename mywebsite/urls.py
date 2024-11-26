@@ -20,5 +20,7 @@ from mywebsite import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("about-us/", views.aboutUs)
+    path("about-us/", views.aboutUs),
+    path("course/", views.course),
+    path("course/<courseId>", views.courseDetails)
 ]
