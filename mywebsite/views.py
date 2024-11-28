@@ -3,7 +3,14 @@ from django.shortcuts import render
 
 
 def home(request):
-    data = {"title": "Home Page"}
+    data = {
+        "title": "Home Page",
+        "plist": ["Java", "Python", "Django"],
+        "students": [
+            {"name": "Brajesh", "phone": 9834543345},
+            {"name": "Bikram", "phone": 9857543345},
+        ],
+    }
     return render(request, "index.html", data)
 
 
