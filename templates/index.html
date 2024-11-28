@@ -4,6 +4,9 @@
     </head>
     <body>
         My protfolio website.
-        
+        {% for x in plist%}
+        <div>{{forloop.counter0}}{{x}}</div>
+        {% endfor %}
+        <br>
     </body>
 </html>
