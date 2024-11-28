@@ -8,5 +8,23 @@
         <div>{{forloop.counter0}}{{x}}</div>
         {% endfor %}
         <br>
+        <table border="2" cellpadding="7">
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+            </tr>
+            {% for x in students %}
+            <tr>
+                <td>{{x.name}}</td>
+                <td>{{x.phone}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        {% for x in numbers %}
+        {% if x > 3 %}
+        <div>{{x}}</div>
+        {% endif %}
+        {% endfor %}
     </body>
 </html>

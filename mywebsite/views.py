@@ -9,7 +9,10 @@ def home(request):
         "students": [
             {"name": "Brajesh", "phone": 9834543345},
             {"name": "Bikram", "phone": 9857543345},
+            {"name": "Shankar", "phone": 9865543345},
+            {"name": "Hari", "phone": 9807543345},
         ],
+        "numbers": [1, 2, 3, 4, 5, 6],
     }
     return render(request, "index.html", data)
 
