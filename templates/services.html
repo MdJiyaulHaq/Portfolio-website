@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block mainContent %}
+<section class="features-section">
+    <h1>Some Features that Made us Unique</h1>
+    <p class="subtitle">Who are in extremely love with eco-friendly system.</p>
+
+    <div class="features-container">
+        
+        <!-- Feature 1 -->
+        {% for x in servicesData %}
+        <div class="feature-box">
+            <div class="icon">{{x.service_icon}}</div>
+            <h3>{{x.service_title}}</h3>
+            <p>{{x.service_des}}</p>
+        </div>
+        
+        {% endfor %}
+
+    </div>
+</section>
+{% endblock %}
