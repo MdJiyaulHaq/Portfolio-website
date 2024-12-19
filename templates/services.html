@@ -12,7 +12,7 @@
         <div class="feature-box">
             <div class="icon">{{x.service_icon}}</div>
             <h3>{{x.service_title}}</h3>
-            <p>{{x.service_des}}</p>
+            <p>{{x.service_des | safe | upper | slice:"0:5" }}</p>
         </div>
         
         {% endfor %}

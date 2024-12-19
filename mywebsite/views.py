@@ -31,11 +31,12 @@ def blogs(request):
     return render(request, "blogs.html")
 
 
+# views of main app
 def services(request):
-    servicesData = Services.objects.all()
-    data = {
-        "servicesData": servicesData
-        }
+    # to limit the query results
+    # cannot use negative indexing
+    servicesData = Services.objects.all().order_by("-service_title")[:5]
+    data = {"servicesData": servicesData}
     return render(request, "services.html", data)
 
 
