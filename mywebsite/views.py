@@ -1,6 +1,6 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
-
+from blogs.models import blogDetail
 from services.models import Services
 
 
@@ -19,7 +19,11 @@ def projects(request):
 
 
 def blogs(request):
-    return render(request, "blogs.html")
+    blogData = blogDetail.objects.all()
+    data = {
+        "blogData": blogData,
+    }
+    return render(request, "blogs.html", data)
 
 
 # views of main app
