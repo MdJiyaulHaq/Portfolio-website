@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 
 {% block mainContent %}
+
+<marquee id="marquee" direction="right"> 
+    {% for x in servicesData%}
+    {{x.service_title}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {% endfor %}
+</marquee>
+
 <section class="features-section">
     <h1>Some Features that Made us Unique</h1>
     <p class="subtitle">Who are in extremely love with eco-friendly system.</p>
