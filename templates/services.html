@@ -2,19 +2,12 @@
 
 {% block mainContent %}
 
-<marquee id="marquee" direction="right"> 
-    {% for x in servicesData%}
-    <a href="">{{x.service_title}}</a> 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    {% endfor %}
-</marquee>
-
 <section class="features-section">
     <h1>Some Features that Made us Unique</h1>
     <p class="subtitle">Who are in extremely love with eco-friendly system.</p>
 
     <div class="features-container">
-        
+
         <!-- Feature 1 -->
         {% for x in servicesData %}
         <div class="feature-box">
@@ -22,7 +15,7 @@
             <h3>{{x.service_title}}</h3>
             <p>{{x.service_des | safe | upper | slice:"0:5" }}</p>
         </div>
-        
+
         {% endfor %}
 
     </div>
