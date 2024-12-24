@@ -5,7 +5,7 @@
 <marquee onmouseover="stop()" onmouseout="start()" id="marquee"
     direction="left">
     {% for x in blogData%}
-    <a href="/blogDetail/{{x.id}}">{{x.blog_title}}</a>
+    <a href="/blogDetail/{{x.blog_slug}}">{{x.blog_title}}</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     {% endfor %}
 </marquee>
@@ -20,7 +20,8 @@
             user experience.
         </p>
         <div class="icons">
-            <a target="_blank" href="https://github.com/MdJiyaulHaq" aria-label="GitHub"><img
+            <a target="_blank" href="https://github.com/MdJiyaulHaq"
+                aria-label="GitHub"><img
                     src="github-icon.png"
                     alt="GitHub"></a>
             <a target="_blank" href="https://www.linkedin.com/in/md-jiyaul-haq/"
@@ -37,7 +38,7 @@
         <p class="date">{{x.blog_date}}</p>
         <h2>{{x.blog_title | safe}}</h2>
         <p>{{x.blog_des | safe}}</p>
-        <a href="/blogDetail/{{x.id}}" class="read-post">Read post →</a>
+        <a href="/blogDetail/{{x.blog_slug}}" class="read-post">Read post →</a>
     </article>
     {% endfor %}
 </section>

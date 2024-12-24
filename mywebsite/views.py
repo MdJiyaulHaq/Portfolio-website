@@ -12,8 +12,8 @@ def home(request):
     return render(request, "index.html", data)
 
 
-def blogDetail(request, blogId):
-    blogData = Blogs.objects.get(id=blogId)
+def blogDetail(request, slug):
+    blogData = Blogs.objects.get(blog_slug=slug)
     data = {
         "blogData": blogData,
     }
