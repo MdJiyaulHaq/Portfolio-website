@@ -9,7 +9,7 @@
         <p class="date">{{x.blog_date}}</p>
         <h2>{{x.blog_title | safe}}</h2>
         <p>{{x.blog_des | safe}}</p>
-        <a href="#" class="read-post">Read post →</a>
+        <a href="/blogDetail/{{x.id}}" class="read-post">Read post →</a>
     </article>
     {% endfor %}
 

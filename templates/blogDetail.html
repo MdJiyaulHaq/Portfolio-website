@@ -2,22 +2,15 @@
 
 {% block mainContent %}
 
-<section class="features-section">
-    <h1>Some Features that Made us Unique</h1>
-    <p class="subtitle">Who are in extremely love with eco-friendly system.</p>
+<!-- Blog Section -->
+<section id="blog" class="blog">
+    
+    <article>
+        <p class="date">{{blogData.blog_date}}</p>
+        <h2>{{blogData.blog_title | safe}}</h2>
+        <p>{{blogData.blog_des | safe}}</p>
+    </article>
+    
 
-    <div class="features-container">
-
-        <!-- Feature 1
-        {% for x in servicesData %}
-        <div class="feature-box">
-            <div class="icon">{{x.service_icon}}</div>
-            <h3>{{x.service_title | safe}}</h3>
-            <p>{{x.service_des | safe}}</p>
-        </div>
-
-        {% endfor %} -->
-
-    </div>
 </section>
 {% endblock %}

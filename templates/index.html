@@ -5,7 +5,7 @@
 <marquee onmouseover="stop()" onmouseout="start()" id="marquee"
     direction="right">
     {% for x in blogData%}
-    <a href>{{x.blog_title}}</a>
+    <a href="/blogDetail/{{x.id}}">{{x.blog_title}}</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     {% endfor %}
 </marquee>

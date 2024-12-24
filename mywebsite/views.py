@@ -12,8 +12,12 @@ def home(request):
     return render(request, "index.html", data)
 
 
-def blogDetail(request):
-    return render(request)
+def blogDetail(request, blogId):
+    blogData = Blogs.objects.get(id=blogId)
+    data = {
+        "blogData": blogData,
+    }
+    return render(request, "blogDetail.html", data)
 
 
 def aboutMe(request):
