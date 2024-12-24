@@ -5,7 +5,7 @@ from services.models import Services
 
 
 def home(request):
-    blogData = Blogs.objects.all()
+    blogData = Blogs.objects.all()[:2]
     data = {
         "blogData": blogData,
     }
