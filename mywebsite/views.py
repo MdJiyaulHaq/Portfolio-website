@@ -40,7 +40,11 @@ def blogs(request):
 def services(request):
     # to limit the query results
     # cannot use negative indexing
-    servicesData = Services.objects.all().order_by("-service_title")[:5]
+    servicesData = Services.objects.all().order_by("-service_title")
+    if request.method == "GET":
+        searchData = request.GET.get("serviceName")
+        if searchData != None:
+            servicesData = Services.objects.filter(service_title__icontains=searchData)
     data = {"servicesData": servicesData}
     return render(request, "services.html", data)
 

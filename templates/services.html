@@ -5,7 +5,15 @@
 <section class="features-section">
     <h1>Some Features that Made us Unique</h1>
     <p class="subtitle">Who are in extremely love with eco-friendly system.</p>
-
+    <div class="row">
+        <div class="col">
+            <form action method="get">
+                <input type="text" name="serviceName" value>
+                <input type="submit" name="search">
+            </form>
+        </div>
+    </div>
+    <br>
     <div class="features-container">
 
         <!-- Feature 1 -->
@@ -15,7 +23,8 @@
             <h3>{{x.service_title | safe}}</h3>
             <p>{{x.service_des | safe}}</p>
         </div>
-
+        {% empty%}
+        No Data found
         {% endfor %}
 
     </div>
