@@ -4,8 +4,8 @@
 <!-- index.html -->
 <marquee onmouseover="stop()" onmouseout="start()" id="marquee"
     direction="right">
-    {% for x in servicesData%}
-    <a href>{{x.service_title}}</a>
+    {% for x in blogData%}
+    <a href>{{x.blog_title}}</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     {% endfor %}
 </marquee>

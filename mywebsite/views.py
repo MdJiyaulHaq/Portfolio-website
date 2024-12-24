@@ -5,8 +5,10 @@ from services.models import Services
 
 
 def home(request):
-    servicesData = Services.objects.all().order_by("-service_title")
-    data = {"servicesData": servicesData}
+    blogData = Blogs.objects.all()
+    data = {
+        "blogData": blogData,
+    }
     return render(request, "index.html", data)
 
 
