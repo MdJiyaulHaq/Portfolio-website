@@ -1,6 +1,6 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
-from blogs.models import blogDetail
+from blogs.models import Blogs
 from services.models import Services
 
 
@@ -8,6 +8,10 @@ def home(request):
     servicesData = Services.objects.all().order_by("-service_title")
     data = {"servicesData": servicesData}
     return render(request, "index.html", data)
+
+
+def blogDetail(request):
+    return render(request)
 
 
 def aboutMe(request):
@@ -19,7 +23,7 @@ def projects(request):
 
 
 def blogs(request):
-    blogData = blogDetail.objects.all()
+    blogData = Blogs.objects.all()
     data = {
         "blogData": blogData,
     }
