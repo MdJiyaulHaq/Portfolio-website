@@ -2,6 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from blogs.models import Blogs
 from services.models import Services
+from contactEnquiry.models import ContactEnquiry
 
 
 def home(request):
@@ -52,17 +53,15 @@ def services(request):
 def form(request):
     try:
         if request.method == "POST":
-            n1 = request.POST.get("name")
-            n2 = request.POST.get("email")
-            n3 = request.POST.get("message")
-            n4 = request.POST.get("password")
-        data = {
-            "n1": n1,
-            "n2": n2,
-            "n3": n3,
-            "n4": n4,
-        }
-        return HttpResponseRedirect("/about/", data)
+            name = request.POST.get("name")
+            email = request.POST.get("email")
+            password = request.POST.get("password")
+            message = request.POST.get("message")
+        data = ContactEnquiry(
+            name=name, email=email, password=password, message=message
+        )
+        data.save()
+        return HttpResponseRedirect("/about/")
         return redirect("/about/", data)
     except:
         pass

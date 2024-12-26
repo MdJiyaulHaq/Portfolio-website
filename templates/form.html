@@ -3,7 +3,7 @@
 {% block mainContent %}
 <div class="form-container">
   <h2>User Form</h2>
-  <form  method="POST">
+  <form action="{% url 'form' %}" method="POST">
     {% csrf_token %}
     <!-- Name Field -->
     <div class="form-group">
