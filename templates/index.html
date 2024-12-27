@@ -9,16 +9,19 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     {% endfor %}
 </marquee>
+
 <!-- Main Content -->
+<section id="home"></section>
 <section id="about" class="intro">
     <div class="content">
         <h1>Hello! I'm Md Jiyaul Haq.</h1>
         <p>
-            A Web Developer based in Pokhara with a passion for creating
-            visually stunning
-            and performative web applications. I focus on optimizing
-            user experience.
+            A Python Django developer based in Pokhara with a passion for
+            creating
+            visually stunning and high-performing web applications. I specialize
+            in backend development with Django.
         </p>
+
         <div class="icons">
             <a target="_blank" href="https://github.com/MdJiyaulHaq"
                 aria-label="GitHub"><img
@@ -31,8 +34,21 @@
     </div>
 </section>
 
+<!-- Projects Section -->
+<section id="projects" class="projects">
+    <h2>Recent Projects</h2>
+    {% for x in projectData%}
+    <div class="project-card">
+        <h3>{{x.project_title | safe}}</h3>
+        <p>{{x.project_technology | safe}}</p>
+    </div>
+    {% endfor %}
+    <a href="{% url 'projects' %}" class="view-projects">View all Projects →</a>
+</section>
+
 <!-- Blog Section -->
 <section id="blog" class="blog">
+    <h2>Recent Blogs</h2>
     {% for x in blogData%}
     <article>
         <p class="date">{{x.blog_date}}</p>
@@ -41,24 +57,6 @@
         <a href="/blogDetail/{{x.blog_slug}}" class="read-post">Read post →</a>
     </article>
     {% endfor %}
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="projects">
-    <h2>Recent Projects</h2>
-    <div class="project-card">
-        <h3>Domain Manager</h3>
-        <p>React, Express, Tailwind</p>
-    </div>
-    <div class="project-card">
-        <h3>Portfolio v2</h3>
-        <p>TypeScript, Tailwind</p>
-    </div>
-    <div class="project-card">
-        <h3>GitHub Profile CLI</h3>
-        <p>Node, Picocolors</p>
-    </div>
-    <a href="#" class="view-projects">View all Projects →</a>
 </section>
 
 {% endblock %}

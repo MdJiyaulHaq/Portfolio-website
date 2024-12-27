@@ -2,12 +2,15 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from blogs.models import Blogs
 from services.models import Services
+from projects.models import Projects
 from contactEnquiry.models import ContactEnquiry
 
 
 def home(request):
+    projectData = Projects.objects.all()[:2]
     blogData = Blogs.objects.all()[:2]
     data = {
+        "projectData": projectData,
         "blogData": blogData,
     }
     return render(request, "index.html", data)
@@ -26,7 +29,11 @@ def aboutMe(request):
 
 
 def projects(request):
-    return render(request, "projects.html")
+    projectData = Projects.objects.all()
+    data = {
+        "projectData": projectData,
+    }
+    return render(request, "projects.html", data)
 
 
 def blogs(request):
