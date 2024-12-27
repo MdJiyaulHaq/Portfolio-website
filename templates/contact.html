@@ -2,8 +2,10 @@
 
 {% block mainContent %}
 <div class="form-container">
+  <br>
   <h2>User Form</h2>
-  <form action="{% url 'form' %}" method="POST">
+  <br>
+  <form action="{% url 'contact' %}" method="POST">
     {% csrf_token %}
     <!-- Name Field -->
     <div class="form-group">
@@ -11,7 +13,7 @@
       <input type="text" id="name" name="name" placeholder="Enter your name"
         required>
     </div>
-
+    <br>
     <!-- Email Field -->
     <div class="form-group">
       <label for="email">Email</label>
@@ -19,20 +21,14 @@
         required>
     </div>
 
-    <!-- Password Field -->
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password"
-        placeholder="Enter your password" required>
-    </div>
-
+    <br>
     <!-- Message Field -->
     <div class="form-group">
       <label for="message">Message</label>
       <textarea id="message" name="message" rows="4"
         placeholder="Enter your message"></textarea>
     </div>
-
+    <br>
     <!-- Submit Button -->
     <button type="submit">Submit</button>
   </form>

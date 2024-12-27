@@ -46,7 +46,7 @@ def blogs(request):
 # views of main app
 
 
-def form(request):
+def contact(request):
     try:
         if request.method == "POST":
             name = request.POST.get("name")
@@ -61,4 +61,4 @@ def form(request):
         return redirect("/about/", data)
     except:
         pass
-    return render(request, "form.html")
+    return render(request, "contact.html")

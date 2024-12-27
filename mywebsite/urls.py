@@ -27,5 +27,5 @@ urlpatterns = [
     path("projects/", views.projects, name="projects"),
     path("blogs/", views.blogs, name="blogs"),
     path("blogDetail/<slug>", views.blogDetail, name="blogDetail"),
-    path("form/", views.form, name="form"),
+    path("contact/", views.contact, name="contact"),
 ]
