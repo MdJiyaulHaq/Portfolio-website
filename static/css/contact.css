@@ -1,4 +1,10 @@
 /* Button Styling */
+.form-container {
+  max-width: 500px;
+  margin: 3rem auto;
+  text-align: center;
+  padding: 1rem;
+}
 button {
   background-color: #0dcaf0;
   color: white;
