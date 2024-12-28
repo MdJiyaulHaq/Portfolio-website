@@ -5,6 +5,7 @@ from autoslug import AutoSlugField
 
 # Create your models here.
 class Projects(models.Model):
+    project_added_at = models.DateTimeField(auto_now_add=True)
     project_title = models.CharField(max_length=255)
     project_des = HTMLField()
     project_technology = models.CharField(max_length=512)

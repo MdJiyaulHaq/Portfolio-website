@@ -5,7 +5,7 @@ from tinymce.models import HTMLField
 
 # Create your models here.
 class Blogs(models.Model):
-    blog_date = models.DateTimeField(auto_now_add=True)
+    blog_added_at = models.DateTimeField(auto_now_add=True)
     blog_title = models.CharField(max_length=255)
     blog_overview = models.CharField(max_length=255)
     blog_des = HTMLField()

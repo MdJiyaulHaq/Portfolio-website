@@ -6,6 +6,7 @@ from projects.models import Projects
 class ProjectAdmin(admin.ModelAdmin):
 
     list_display = (
+        "project_added_at",
         "project_title",
         "project_technology",
         "project_des",

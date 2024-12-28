@@ -52,12 +52,14 @@
 <section id="blog" class="blog">
     <h2>Recent Blogs</h2>
     {% for x in blogData%}
+    {% if forloop.counter <= 2 %}
     <article>
-        <p class="date">{{x.blog_date}}</p>
+        <p class="date">{{x.blog_added_at}}</p>
         <h2 style="color:#00ff88;">{{x.blog_title | safe}}</h2>
         <p>{{x.blog_overview | safe}}</p>
         <a href="/blogDetail/{{x.blog_slug}}" class="read-post">Read post →</a>
     </article>
+    {% endif %}
     {% endfor %}
 </section>
 
