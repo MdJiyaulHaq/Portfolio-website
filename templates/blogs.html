@@ -8,7 +8,7 @@
     <article>
         <p class="date">{{x.blog_date}}</p>
         <h2 style="color:#00ff88;">{{x.blog_title | safe}}</h2>
-        <h6>{{x.blog_overview | safe}}</h6>
+        <p style="font-style: bold;">{{x.blog_overview | safe}}</p>
         <a href="/blogDetail/{{x.blog_slug}}" class="read-post">Read post →</a>
     </article>
     {% endfor %}
