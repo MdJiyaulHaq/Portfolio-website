@@ -44,7 +44,7 @@ header nav ul li a:hover {
 .about .container {
     max-width: 800px;
     margin: 3rem auto;
-    text-align: left;
+    text-align: center;
     padding: 1rem;
 }
 
