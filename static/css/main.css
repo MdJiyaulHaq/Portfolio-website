@@ -56,7 +56,12 @@ header nav ul li a:hover {
   margin: auto;
   opacity: 0.9;
 }
-
+.intro a {
+  color: #0dcaf0
+}
+.marquee a {
+  color: #0dcaf0
+}
 .icons img {
   width: 30px;
   margin: 10px;
@@ -81,7 +86,7 @@ header nav ul li a:hover {
 }
 
 .read-post {
-  color: #0077ff;
+  color: #0dcaf0;
   text-decoration: none;
 }
 
@@ -102,11 +107,15 @@ header nav ul li a:hover {
 .project-card h3 {
   color: #00ff88;
 }
+#submit{
+  padding: 44px;
+  margin: 44px;
+}
 
 .view-projects {
   display: inline-block;
   margin-top: 1rem;
-  color: #0077ff;
+  color: #0dcaf0;
   text-decoration: none;
 }
 

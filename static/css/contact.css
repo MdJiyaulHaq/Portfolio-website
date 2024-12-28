@@ -1,0 +1,21 @@
+/* Button Styling */
+button {
+  background-color: #0dcaf0;
+  color: white;
+  text-decoration: solid;
+  padding: 9px;
+  border-radius: 9px;
+  background-color: #0dcaf0;
+  border: none;
+  padding: 9px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

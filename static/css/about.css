@@ -55,7 +55,7 @@ header nav ul li a:hover {
 }
 
 .about .highlight {
-    color: #0dcaf0;
+    color:#00ff88;
 }
 
 .about p {
@@ -76,7 +76,7 @@ header nav ul li a:hover {
 .about .fun-fact {
     font-style: italic;
     margin-top: 1.5rem;
-    color: #0dcaf0;
+    color: #00ff88;
 }
 
 .contact-links {
@@ -87,9 +87,9 @@ header nav ul li a:hover {
     display: inline-block;
     background: #0dcaf0;
     color: #121212;
-    padding: 0.75rem 1.5rem;
+    padding: 7pxrem 10px;
     margin-right: 1rem;
-    border-radius: 5px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s;
