@@ -2,11 +2,12 @@
 
 {% block mainContent %}
 <!-- index.html -->
+<br>
 <marquee class="marquee" onmouseover="stop()" onmouseout="start()" id="marquee"
     direction="left">
     {% for x in blogData%}
     <a href="/blogDetail/{{x.blog_slug}}">{{x.blog_title}}</a>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     {% endfor %}
 </marquee>
 
@@ -14,7 +15,8 @@
 <section id="home"></section>
 <section id="about" class="intro">
     <div class="content">
-        <h1>Hello! I'm <span style="color:#00ff88;" class="highlight">Md Jiyaul Haq</span></h1>
+        <h1>Hello! I'm <span style="color:#00ff88;" class="highlight">Md Jiyaul
+                Haq</span></h1>
         <p>
             A Python Django developer based in Pokhara with a passion for
             creating
