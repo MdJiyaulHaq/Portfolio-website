@@ -28,7 +28,7 @@ def aboutMe(request):
 
 
 def projects(request):
-    projectData = Projects.objects.all()
+    projectData = Projects.objects.all().order_by("-project_added_at")
     data = {
         "projectData": projectData,
     }
