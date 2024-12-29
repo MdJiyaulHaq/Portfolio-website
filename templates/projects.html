@@ -16,8 +16,12 @@
             <div class="project-card">
                 <h3>{{x.project_title | safe}}</h3>
                 <p>{{x.project_des | safe}}</p>
-                <p><strong>Tech Stack:</strong>{{x.project_technology | safe}}</p>
-                <a href="https://github.com"
+                <p><strong style="font-size: 18px;
+                    font-weight: bold;
+                    margin-top: 20px;
+                    color: #00FFFF;">Tech Stack: </strong>{{x.project_technology
+                    | safe}}</p>
+                <a style="text-decoration: underline;" href="https://github.com"
                     target="_blank">github.com</a>
             </div>
             {% endfor %}
