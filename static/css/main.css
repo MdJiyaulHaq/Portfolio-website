@@ -40,23 +40,7 @@ header nav ul li a:hover {
   background-color: #0077ff;
 }
 
-.intro {
-  text-align: center;
-  padding: 4rem 1rem;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
-}
 
-.intro img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 3px solid #0077ff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  object-fit: cover;
-}
 
 .intro h1 {
   font-size: 3rem;
