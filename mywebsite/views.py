@@ -51,14 +51,10 @@ def contact(request):
         if request.method == "POST":
             name = request.POST.get("name")
             email = request.POST.get("email")
-            password = request.POST.get("password")
             message = request.POST.get("message")
-        data = ContactEnquiry(
-            name=name, email=email, password=password, message=message
-        )
+        data = ContactEnquiry(name=name, email=email, message=message)
         data.save()
-        return HttpResponseRedirect("/about/")
-        return redirect("/about/", data)
-    except:
-        pass
+        return HttpResponseRedirect("/about/", data)
+    except Exception as e:
+        print(e)
     return render(request, "contact.html")
