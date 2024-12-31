@@ -1,0 +1,12 @@
+.blog {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 1rem;
+  padding: 2rem 1rem;
+  align-items: center;
+  max-width: 600px;
+  min-width: 400px;
+  margin: 3rem auto;
+  text-align: center;
+  padding: 1rem;
+}

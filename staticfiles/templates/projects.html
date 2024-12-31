@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block mainContent %}
+<main>
+    <section class="projects-section">
+        <h1>A Collection Of My Work</h1>
+        <p>
+            I've worked on many personal projects over the years but
+            these are the ones that I'm most proud of. Many of them are
+            open-source, so if you see something that piques your
+            interest, check out the code and contribute if you have
+            ideas for how it can be improved!
+        </p>
+        <div class="projects-grid">
+            {% for x in projectData%}
+            <div class="project-card">
+                <h3>{{x.project_title | safe}}</h3>
+                <p>{{x.project_des | safe}}</p>
+                <p><strong style="font-size: 18px;
+                    font-weight: bold;
+                    margin-top: 20px;
+                    color: #00FFFF;">Tech Stack: </strong>{{x.project_technology | safe}}</p>
+                <a style="text-decoration: underline;" href="https://github.com"
+                    target="_blank">github.com</a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock %}

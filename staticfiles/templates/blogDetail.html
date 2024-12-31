@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block mainContent %}
+
+<!-- Blog Section -->
+<section id="blog" class="blog">
+
+    <article>
+        <p class="date">{{blogData.blog_date}}</p>
+        <h2 style="color:#00ff88;">{{blogData.blog_title | safe}}</h2>
+        <p style="text-decoration: underline;">{{blogData.blog_overview | safe}}</p>
+        <br>
+        <p>{{blogData.blog_des | safe}}</p>
+    </article>
+
+</section>
+{% endblock %}
