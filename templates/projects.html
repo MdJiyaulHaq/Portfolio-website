@@ -2,7 +2,7 @@
 
 {% block mainContent %}
 <main>
-    <section class="projects-section">
+    <section style="max-width: 720px;" class="projects-section">
         <h1>A Collection Of My Work</h1>
         <p>
             I've worked on many personal projects over the years but
@@ -19,7 +19,8 @@
                 <p><strong style="font-size: 18px;
                     font-weight: bold;
                     margin-top: 20px;
-                    color: #00FFFF;">Tech Stack: </strong>{{x.project_technology | safe}}</p>
+                    color: #00FFFF;">Tech Stack: </strong>{{x.project_technology
+                    | safe}}</p>
                 <a style="text-decoration: underline;" href="https://github.com"
                     target="_blank">github.com</a>
             </div>
