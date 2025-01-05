@@ -6,11 +6,13 @@
 <section id="blog" class="blog">
 
     <article>
-        <p class="date">{{blogData.blog_date}}</p>
         <h2 style="color:#00ff88;">{{blogData.blog_title | safe}}</h2>
+        <p class="date">{{blogData.blog_added_at}}</p>
         <p style="text-decoration: underline;">{{blogData.blog_overview | safe}}</p>
         <br>
-        <p>{{blogData.blog_des | safe}}</p>
+        <div style="text-align: left;">
+            <p>{{blogData.blog_des | safe}}</p>
+        </div>
     </article>
 
 </section>
