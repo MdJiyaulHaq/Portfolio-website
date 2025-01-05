@@ -63,7 +63,8 @@ gap: 2rem;" id="about" class="intro">
                 </strong>
                 {{x.project_technology | safe}}
             </p>
-            <a style="text-decoration: underline;" href="https://github.com"
+            <a style="text-decoration: underline;"
+                href="{{ x.project_link }}"
                 target="_blank">github.com</a>
         </div>
         {% endfor %}
