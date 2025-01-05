@@ -6,7 +6,7 @@ from contactEnquiry.models import ContactEnquiry
 
 
 def home(request):
-    projectData = Projects.objects.all().order_by("-project_added_at")[:2]
+    projectData = Projects.objects.all().order_by("-project_added_at")[:4]
     blogData = Blogs.objects.all().order_by("-blog_added_at")[:3]
     data = {
         "projectData": projectData,

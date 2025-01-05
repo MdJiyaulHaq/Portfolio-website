@@ -2,14 +2,14 @@
 
 {% block mainContent %}
 <!-- index.html -->
-<br>
-<marquee class="marquee" onmouseover="stop()" onmouseout="start()" id="marquee"
+
+<!-- <marquee class="marquee" onmouseover="stop()" onmouseout="start()" id="marquee"
     direction="left">
     {% for x in blogData%}
     <a href="/blogDetail/{{x.blog_slug}}">{{x.blog_title}}</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     {% endfor %}
-</marquee>
+</marquee> -->
 
 <!-- Main Content -->
 <section id="home"></section>
@@ -24,7 +24,8 @@ gap: 2rem;" id="about" class="intro">
     border-radius: 50%;
     border: 3px solid #0077ff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    object-fit: cover;" src="https://res.cloudinary.com/dmlc27oq3/image/upload/v1736077963/Md_xiqmat.jpg"
+    object-fit: cover;"
+        src="/static/img/Md.jpeg"
         alt="My Photo">
     <div class="content">
         <h1>Hello! I'm <span style="color:#00ff88;" class="highlight">Md Jiyaul
@@ -35,7 +36,7 @@ gap: 2rem;" id="about" class="intro">
             visually stunning and high-performing web applications. I specialize
             in backend development with Django.
         </p>
-<br>
+        <br>
         <div class="icons">
             <a target="_blank" href="https://github.com/MdJiyaulHaq"
                 aria-label="GitHub"><img
@@ -49,15 +50,27 @@ gap: 2rem;" id="about" class="intro">
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="projects">
+<section style="max-width: 720px;" class="projects-section">
     <h2>Recent Projects</h2>
-    {% for x in projectData%}
-    <div class="project-card">
-        <h3>{{x.project_title | safe}}</h3>
-        <p>{{x.project_technology | safe}}</p>
+    <div class="projects-grid">
+        {% for x in projectData%}
+        <div class="project-card">
+            <h3>{{x.project_title | safe}}</h3>
+            <p><strong style="font-size: 18px;
+                font-weight: bold;
+                margin-top: 20px;
+                color: #00FFFF;">Tech Stack:
+                </strong>
+                {{x.project_technology | safe}}
+            </p>
+            <a style="text-decoration: underline;" href="https://github.com"
+                target="_blank">github.com</a>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-    <a href="{% url 'projects' %}" class="view-projects">View all Projects →</a>
+    <a href="{% url 'projects' %}" class="view-projects">View all Projects
+        →</a>
+
 </section>
 
 <!-- Blog Section -->
