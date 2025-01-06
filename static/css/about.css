@@ -43,6 +43,7 @@ header nav ul li a:hover {
 /* About Section */
 .about .container {
     max-width: 700px;
+    min-width: 166px;
     margin: 3rem auto;
     text-align: center;
     padding: 1rem;

@@ -1,0 +1,19 @@
+/* Sticky Footer Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the container takes up the full viewport height */
+}
+
+footer {
+    margin-top: auto; /* Pushes footer to the bottom when content is short */
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #000;
+    color: #fff;
+}
