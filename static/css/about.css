@@ -81,7 +81,7 @@ header nav ul li a:hover {
 }
 
 .contact-links {
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .contact-links .button {
@@ -89,6 +89,7 @@ header nav ul li a:hover {
     background: #0dcaf0;
     color: #121212;
     padding: 7px 10px;
+    margin-top: 1rem;
     margin-right: 1rem;
     border-radius: 10px;
     text-decoration: none;
