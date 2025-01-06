@@ -9,32 +9,31 @@
     {% csrf_token %}
     <!-- Name Field -->
     <div class="form-group">
-      <label for="name">Name</label>
-      <input style="padding: 7px; border-radius: 7px;" type="text" id="name"
-        name="name" placeholder="Enter your name"
-        required>
+      <div><label for="name">Name:</label></div>
+      <div><input style="padding: 7px; border-radius: 7px;" type="text" id="name" name="name"
+          placeholder="Enter your name" required>
+      </div>
     </div>
     <br>
     <!-- Email Field -->
     <div class="form-group">
-      <label for="email">Email</label>
-      <input style="padding: 7px; border-radius: 7px;" type="email" id="email"
-        name="email" placeholder="Enter your email"
-        required>
+      <div><label for="email">Email:</label></div>
+      <div><input style="padding: 7px; border-radius: 7px;" type="email" id="email" name="email"
+          placeholder="Enter your email" required>
+      </div>
     </div>
 
     <br>
     <!-- Message Field -->
     <div class="form-group">
-      <label for="message">Message</label>
-      <textarea style="padding: 7px; border-radius: 7px;" id="message"
-        name="message" rows="4"
-        placeholder="Enter your message"></textarea>
+      <div><label for="message">Message:</label></div>
+      <div><textarea style="padding: 7px; border-radius: 7px;" type="textarea" id="message" name="message" rows="4"
+          placeholder="Enter your message"></textarea>
+      </div>
     </div>
     <br>
     <!-- Submit Button -->
-    <button 
-      type="submit"> Submit </button>
+    <button type="submit"> Submit </button>
   </form>
 </div>
 {% endblock %}
