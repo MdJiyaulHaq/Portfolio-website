@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['web-production-b4790.up.railway.app', '127.0.0.1', 'mdjiyaul.com.np','localhost']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://mdjiyaul.com.np",
+    "https://www.mdjiyaul.com.np"
+]
 
 
 # Application definition
