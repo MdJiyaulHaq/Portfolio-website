@@ -11,6 +11,9 @@ body {
   color: #fff;
   line-height: 1.6;
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -127,6 +130,7 @@ header nav ul li a:hover {
 }
 
 footer {
+  margin-top: auto;
   text-align: center;
   padding: 2rem 0;
   background-color: #000;
