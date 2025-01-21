@@ -15,14 +15,6 @@ def home(request):
     return render(request, "index.html", data)
 
 
-def blogDetail(request, slug):
-    blogData = Blogs.objects.get(blog_slug=slug)
-    data = {
-        "blogData": blogData,
-    }
-    return render(request, "blogDetail.html", data)
-
-
 def aboutMe(request):
     return render(request, "about.html")
 
@@ -33,17 +25,6 @@ def projects(request):
         "projectData": projectData,
     }
     return render(request, "projects.html", data)
-
-
-def blogs(request):
-    blogData = Blogs.objects.all()
-    data = {
-        "blogData": blogData,
-    }
-    return render(request, "blogs.html", data)
-
-
-# views of main app
 
 
 def contact(request):

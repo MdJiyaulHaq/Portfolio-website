@@ -85,7 +85,7 @@ gap: 2rem;" id="about" class="intro">
         <h2 style="color:#00ff88;">{{x.blog_title | safe}}</h2>
         <p class="date">{{x.blog_added_at}}</p>
         <p>{{x.blog_overview | safe}}</p>
-        <a href="/blogDetail/{{x.blog_slug}}" class="read-post">Read post →</a>
+        <a href="/blogs/{{x.blog_slug}}" class="read-post">Read post →</a>
     </article>
     {% endif %}
     {% endfor %}
