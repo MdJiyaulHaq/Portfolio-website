@@ -13,8 +13,3 @@ def home(request):
         "blogData": blogData,
     }
     return render(request, "index.html", data)
-
-
-def aboutMe(request):
-    return render(request, "about.html")
-

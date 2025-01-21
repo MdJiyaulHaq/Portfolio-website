@@ -23,8 +23,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.home, name="home"),
     path("home/", views.home, name="home"),
-    path("about/", views.aboutMe, name="about"),
+    path("aboutMe/", include("aboutMe.urls")),
     path("projects/", include("projects.urls")),
     path("blogs/", include("blogs.urls")),
-    path("contact/", include("contactEnquiry.urls")),
+    path("contactMe/", include("contactEnquiry.urls")),
 ]
