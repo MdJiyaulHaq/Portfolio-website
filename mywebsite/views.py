@@ -18,10 +18,3 @@ def home(request):
 def aboutMe(request):
     return render(request, "about.html")
 
-
-def projects(request):
-    projectData = Projects.objects.all().order_by("-project_added_at")
-    data = {
-        "projectData": projectData,
-    }
-    return render(request, "projects.html", data)
