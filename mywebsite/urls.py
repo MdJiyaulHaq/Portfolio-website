@@ -26,5 +26,5 @@ urlpatterns = [
     path("about/", views.aboutMe, name="about"),
     path("projects/", views.projects, name="projects"),
     path("blogs/", include("blogs.urls")),
-    path("contact/", views.contact, name="contact"),
+    path("contact/", include("contactEnquiry.urls")),
 ]
