@@ -1,4 +1,17 @@
-/* General Reset */
+/* ===== CSS Variables ===== */
+:root {
+  --primary-bg: #111;
+  --secondary-bg: #000;
+  --accent-blue: #0077ff;
+  --accent-cyan: #0dcaf0;
+  --accent-green: #00ff88;
+  --text-primary: #fff;
+  --text-secondary: #888;
+  --border-color: #444;
+  --card-bg: #333;
+}
+
+/* ===== Base Styles ===== */
 * {
   margin: 0;
   padding: 0;
@@ -7,149 +20,113 @@
 }
 
 body {
-  background-color: #111;
-  color: #fff;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
   line-height: 1.6;
-  text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-header {
-  background-color: #000;
+/* ===== Layout Styles ===== */
+header, footer {
+  background-color: var(--secondary-bg);
   padding: 1rem;
   text-align: center;
 }
 
-header nav ul {
+/* ===== Navigation Styles ===== */
+.nav-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
   list-style: none;
-  gap: 20px;
+
+  & li a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+
+    &.active,
+    &:hover {
+      background-color: var(--accent-blue);
+    }
+  }
 }
 
-header nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-header nav ul li a.active,
-header nav ul li a:hover {
-  background-color: #0077ff;
-}
-
-
-
-.intro h1 {
+/* ===== Typography Styles ===== */
+.section-heading {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 
-.intro p {
+.section-text {
   font-size: 1.2rem;
-  max-width: 666px;
-  margin: auto;
+  max-width: 90%;
+  margin: 0 auto;
   opacity: 0.9;
-}
-.intro a {
-  color: #0dcaf0;
-}
-.marquee a {
-  color: #0dcaf0;
-}
-.icons img {
-  width: 30px;
-  margin: 10px;
+  padding: 0 1rem;
 }
 
-.blog {
-  padding: 2rem 1rem;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #444;
-  padding-bottom: 1rem;
-  padding: 2rem 1rem;
-  align-items: center;
-  max-width: 666px;
-  min-width: 166px;
-  margin: 3rem auto;
-  text-align: center;
-  padding: 1rem;
-}
-
-.blog article {
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #444;
-  padding-bottom: 1rem;
-}
-
-.blog .date {
-  color: #888;
-}
-
-.blog h2 {
-  margin: 0.5rem 0;
-}
-
-.read-post {
-  color: #0dcaf0;
-  text-decoration: none;
-}
-
-.projects {
-  background-color: #111;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.project-card {
-  background-color: #333;
-  margin: 1rem auto;
-  padding: 1rem;
+/* ===== Card Styles ===== */
+.card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
   border-radius: 10px;
-  max-width: 300px;
+  width: 100%;
+
+  & h3 {
+    color: var(--accent-green);
+  }
 }
 
-.project-card h3 {
-  color: #00ff88;
-}
-#submit {
-  padding: 44px;
-  margin: 44px;
-}
-
-.view-projects {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #0dcaf0;
-  text-decoration: none;
-}
-
-footer {
-  margin-top: auto;
+/* ===== Blog Styles ===== */
+.blog-entry {
+  padding: 2rem 1rem;
+  margin: 3rem auto;
+  border-bottom: 1px solid var(--border-color);
+  max-width: 666px;
   text-align: center;
-  padding: 2rem 0;
-  background-color: #000;
+
+  .date {
+    color: var(--text-secondary);
+  }
 }
 
-footer ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-footer ul li a {
-  color: #fff;
+/* ===== Link Styles ===== */
+.accent-link {
+  color: var(--accent-cyan);
   text-decoration: none;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
-footer p {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #888;
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card {
+    margin: 1rem 0;
+  }
 }
+
+/* ===== Utility Classes ===== */
+.text-center { text-align: center; }
+.mt-1 { margin-top: 1rem; }
+.p-1 { padding: 1rem; }
+.flex-column { display: flex; flex-direction: column; }

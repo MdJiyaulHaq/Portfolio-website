@@ -14,17 +14,24 @@
     </head>
     <body>
         <!-- Header Section -->
-        <header>
-            <nav>
-                <ul>
-                    <!--show the active link based on the condition-->
-                    <!--<li><a href="{% url 'home' %}" class="active">Home</a></li>-->
-                    
-                    <li><a href="{% url 'home' %}" class="{% if request.path == '/home/' %}active{% endif %}">Home</a></li>
-                    <li><a href="{% url 'about' %}" class="{% if request.path == '/about/' %}active{% endif %}">About Me</a></li>
-                    <li><a href="{% url 'projects' %}" class="{% if request.path == '/projects/' %}active{% endif %}">Projects</a></li>
-                    <li><a href="{% url 'blogs' %}" class="{% if request.path == '/blogs/' %}active{% endif %}">Blogs</a></li>
-                    <li><a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %}active{% endif %}">Contact Me</a></li>
+        <header class="header">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="{% url 'home' %}" class="nav-link {% if request.path == '/home/' %}active{% endif %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'about' %}" class="nav-link {% if request.path == '/about/' %}active{% endif %}">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'projects' %}" class="nav-link {% if request.path == '/projects/' %}active{% endif %}">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'blogs' %}" class="nav-link {% if request.path == '/blogs/' %}active{% endif %}">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'contact' %}" class="nav-link {% if request.path == '/contact/' %}active{% endif %}">Contact Me</a>
+                    </li>
                 </ul>
             </nav>
         </header>

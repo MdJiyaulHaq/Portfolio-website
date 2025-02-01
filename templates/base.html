@@ -1,6 +1,20 @@
-{% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    {% include "header.html" %}
+    
+    <main class="content-wrapper">
+        {% block mainContent %}
+        {% endblock %}
+    </main>
 
-{% block mainContent %}
-{% endblock %}
-
-{% include "footer.html" %}
+    {% include "footer.html" %}
+</body>
+</html>
