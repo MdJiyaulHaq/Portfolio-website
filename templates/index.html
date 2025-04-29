@@ -53,18 +53,24 @@ gap: 2rem;" id="about" class="intro">
     <h2>Recent Projects</h2>
     <div class="projects-grid">
         {% for x in projectData%}
-        <div class="project-card">
-            <h3>{{x.project_title | safe}}</h3>
-            <p><strong style="font-size: 18px;
-                font-weight: bold;
-                margin-top: 20px;
-                color: #00FFFF;">Tech Stack:
-                </strong>
-                {{x.project_technology | safe}}
-            </p>
-            <a style="text-decoration: underline;"
-                href="{{ x.project_link }}"
-                target="_blank">GitHub</a>
+        <div class="project-card" style="display: flex; flex-direction: column; height: 100%;">
+            <div> <!-- Top content (title, description, tech stack) -->
+                <h3>{{x.project_title | safe}}</h3>
+                <p><strong style="font-size: 18px;
+                    font-weight: bold;
+                    margin-top: 20px;
+                    color: #00FFFF;">Tech Stack:</strong>
+                    {{x.project_technology | safe}}
+                </p>
+            </div>
+            <div style="margin-top: auto;"> <!-- Links pushed to the bottom -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr;">
+                    <a style="text-decoration: underline; justify-self: start;" href="{{ x.project_link }}"
+                        target="_blank">GitHub</a>
+                    <a style="text-decoration: underline; justify-self: end;" href="{{ x.live_link }}" target="_blank">Visit
+                        Website</a>
+                </div>
+            </div>
         </div>
         {% endfor %}
     </div>
