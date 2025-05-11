@@ -4,7 +4,7 @@ from autoslug import AutoSlugField
 
 
 # Create your models here.
-class Projects(models.Model):
+class Project(models.Model):
     project_added_at = models.DateTimeField(auto_now_add=True)
     project_updated_at = models.DateTimeField(auto_now=True)
     project_title = models.CharField(max_length=255)

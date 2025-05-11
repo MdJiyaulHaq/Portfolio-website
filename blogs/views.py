@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from .models import Blogs
+from .models import Blog
 
 
 # Create your views here.
 def blogs(request):
-    blogData = Blogs.objects.all()
+    blogData = Blog.objects.all()
     data = {
         "blogData": blogData,
     }
@@ -12,7 +12,7 @@ def blogs(request):
 
 
 def blogDetail(request, slug):
-    blogData = Blogs.objects.get(blog_slug=slug)
+    blogData = Blog.objects.get(blog_slug=slug)
     data = {
         "blogData": blogData,
     }
