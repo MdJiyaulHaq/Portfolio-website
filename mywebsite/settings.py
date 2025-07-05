@@ -12,12 +12,12 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 import os
 from pathlib import Path
-from environ import Env  # type: ignore
+import environ
 
-env = Env()
-env.read_env()
+env = environ.Env()
+environ.Env.read_env()
 
-ENVIRONMENT = env("ENVIRONMENT", default="development")
+ENVIRONMENT = env("ENVIRONMENT", default="development")  # type: ignore
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -96,7 +96,7 @@ WSGI_APPLICATION = "mywebsite.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {"default": env.db(default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}")}
+DATABASES = {"default": env.db(default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}")}  # type: ignore
 
 
 # Password validation
