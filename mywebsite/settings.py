@@ -12,10 +12,10 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 import os
 from pathlib import Path
-from environ import Env
+from environ import Env  # type: ignore
 
 env = Env()
-env.read_env() 
+env.read_env()
 
 ENVIRONMENT = env("ENVIRONMENT", default="development")
 
@@ -41,10 +41,7 @@ if DEBUG:
 else:
     ALLOWED_HOSTS = ["mdjiyaul.com.np", "www.mdjiyaul.com.np"]
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://mdjiyaul.com.np",
-    "https://www.mdjiyaul.com.np"
-]
+CSRF_TRUSTED_ORIGINS = ["https://mdjiyaul.com.np", "https://www.mdjiyaul.com.np"]
 
 
 # Application definition
@@ -99,9 +96,7 @@ WSGI_APPLICATION = "mywebsite.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    "default": env.db(default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}")
-}
+DATABASES = {"default": env.db(default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}")}
 
 
 # Password validation
@@ -138,9 +133,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static"
-]
+STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
